@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible">
+	<title>COUNTER</title>
+	<link rel="stylesheet" type="text/css" href="">
+	<style>
+		*{
+			background: gray;
+		}
+		#container{
+			height: 200px;
+			width: 200px;
+			border:10px solid orange;
+			margin: 40px auto;
+			background: white;
+		}
+		#number{
+			height: 20px;
+			width: 100px;
+			text-align: center;
+			margin:50px auto;
+			background: red;
+			border:5px solid black;
+		}
+		#increment{
+			height: 40px;
+			width: 40px;
+			color: red;
+			margin-top: 20px;
+			margin-left: 40px;
+			background: yellow;
+		}
+		#decrement{
+			height: 40px;
+			width: 40px;
+			color: blue;
+			margin-top: 20px;
+			margin-left: 40px;
+			background: yellow;
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+	<div id="number">0</div>
+	<button id="increment">+</button><button id="decrement">-</button>
+	</div>
+	<script type="text/javascript">
+		let add = document.getElementById('increment');
+		let sub = document.getElementById('decrement');
+		let int = document.getElementById('number');
+		let num = 0;
+		add.addEventListener('click' , function(){
+		num += 1;
+		int.innerHTML = num;
+		})
+		sub.addEventListener('click' , function(){
+		num -= 1;
+		int.innerHTML = num;
+		})
+	</script>
+</body>
+</html>
